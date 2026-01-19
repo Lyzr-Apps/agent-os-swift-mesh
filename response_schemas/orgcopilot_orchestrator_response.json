@@ -1,0 +1,69 @@
+{
+  "agent_name": "OrgCopilot Orchestrator",
+  "agent_id": "696e4142c3a33af8ef0633c3",
+  "agent_purpose": "manager",
+  "description": "Central controller managing sub-agents and routing queries",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "final_answer": "string",
+      "agents_invoked": [
+        "any"
+      ],
+      "routing_hops": "number",
+      "confidence_score": "number",
+      "sources": [
+        "any"
+      ],
+      "conversation_state": "string",
+      "follow_up_suggestions": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "final_answer": "Your request is too vague. Please specify the action, information, or task you would like me to process or coordinate among the sub-agents.",
+      "agents_invoked": [],
+      "routing_hops": 1,
+      "confidence_score": 0.2,
+      "sources": [],
+      "conversation_state": "active",
+      "follow_up_suggestions": [
+        "Ask a question about attendance, policy, or scheduling",
+        "Request a database report or policy clarification"
+      ]
+    },
+    "metadata": {
+      "agent_name": "OrgCopilot Orchestrator",
+      "timestamp": "2024-06-13T09:55:48.961Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:40:48.933942",
+  "test_message_used": "Process this request and coordinate sub-agents",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "final_answer": "Your request is too vague. Please specify the action, information, or task you would like me to process or coordinate among the sub-agents.",
+      "agents_invoked": [],
+      "routing_hops": 1,
+      "confidence_score": 0.2,
+      "sources": [],
+      "conversation_state": "active",
+      "follow_up_suggestions": [
+        "Ask a question about attendance, policy, or scheduling",
+        "Request a database report or policy clarification"
+      ]
+    },
+    "metadata": {
+      "agent_name": "OrgCopilot Orchestrator",
+      "timestamp": "2024-06-13T09:55:48.961Z"
+    }
+  }
+}

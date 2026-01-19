@@ -1,0 +1,72 @@
+{
+  "agent_name": "Broadcast Composer Agent",
+  "agent_id": "696e4179e1e4c42b224b2534",
+  "agent_purpose": "assistant",
+  "description": "Drafts broadcast messages with audience targeting and compliance checks",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "draft_message": "string",
+      "subject": "string",
+      "audience_filter": {
+        "role": "string"
+      },
+      "estimated_recipients": "number",
+      "urgency": "string",
+      "scheduled_time": "string",
+      "approval_required": "boolean",
+      "approval_card_id": "string",
+      "preview_text": "string",
+      "compliance_check": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "draft_message": "Dear students, the university will be conducting a maintenance activity on the student portal this Saturday from 10 AM to 4 PM. Please plan your activities accordingly as the portal will be unavailable during this period. Thank you for your understanding.",
+      "subject": "Scheduled Student Portal Maintenance",
+      "audience_filter": {
+        "role": "student"
+      },
+      "estimated_recipients": 3200,
+      "urgency": "medium",
+      "scheduled_time": "2024-06-15T09:00:00",
+      "approval_required": true,
+      "approval_card_id": "broadcast_draft_10001",
+      "preview_text": "Portal maintenance scheduled for Saturday 10 AM \u2013 4 PM. Please plan accordingly.",
+      "compliance_check": "passed"
+    },
+    "metadata": {
+      "agent_name": "Broadcast Composer Agent",
+      "timestamp": "2024-06-12T17:32:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:41:03.311073",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "draft_message": "Dear students, the university will be conducting a maintenance activity on the student portal this Saturday from 10 AM to 4 PM. Please plan your activities accordingly as the portal will be unavailable during this period. Thank you for your understanding.",
+      "subject": "Scheduled Student Portal Maintenance",
+      "audience_filter": {
+        "role": "student"
+      },
+      "estimated_recipients": 3200,
+      "urgency": "medium",
+      "scheduled_time": "2024-06-15T09:00:00",
+      "approval_required": true,
+      "approval_card_id": "broadcast_draft_10001",
+      "preview_text": "Portal maintenance scheduled for Saturday 10 AM \u2013 4 PM. Please plan accordingly.",
+      "compliance_check": "passed"
+    },
+    "metadata": {
+      "agent_name": "Broadcast Composer Agent",
+      "timestamp": "2024-06-12T17:32:00Z"
+    }
+  }
+}

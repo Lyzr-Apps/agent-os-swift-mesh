@@ -1,0 +1,83 @@
+{
+  "agent_name": "Semantic Router Agent",
+  "agent_id": "696e415ee1e4c42b224b252d",
+  "agent_purpose": "parser",
+  "description": "Normalizes Hinglish queries to structured intent with routing recommendations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "normalized_query": "string",
+      "original_query": "string",
+      "intent": "string",
+      "confidence": "number",
+      "entities": [
+        {
+          "type": "string",
+          "value": "string"
+        }
+      ],
+      "requires_feedback": "boolean",
+      "suggested_clarification": "null",
+      "routing_recommendation": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "normalized_query": "Parse the sample text for testing purposes",
+      "original_query": "Parse this sample text for testing",
+      "intent": "general_conversation",
+      "confidence": 0.81,
+      "entities": [
+        {
+          "type": "action",
+          "value": "parse"
+        },
+        {
+          "type": "object",
+          "value": "sample text"
+        }
+      ],
+      "requires_feedback": false,
+      "suggested_clarification": null,
+      "routing_recommendation": "General Conversation Handler"
+    },
+    "metadata": {
+      "agent_name": "Semantic Router Agent",
+      "timestamp": "2024-06-20T19:43:02Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:40:45.256156",
+  "test_message_used": "Parse this sample text for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "normalized_query": "Parse the sample text for testing purposes",
+      "original_query": "Parse this sample text for testing",
+      "intent": "general_conversation",
+      "confidence": 0.81,
+      "entities": [
+        {
+          "type": "action",
+          "value": "parse"
+        },
+        {
+          "type": "object",
+          "value": "sample text"
+        }
+      ],
+      "requires_feedback": false,
+      "suggested_clarification": null,
+      "routing_recommendation": "General Conversation Handler"
+    },
+    "metadata": {
+      "agent_name": "Semantic Router Agent",
+      "timestamp": "2024-06-20T19:43:02Z"
+    }
+  }
+}

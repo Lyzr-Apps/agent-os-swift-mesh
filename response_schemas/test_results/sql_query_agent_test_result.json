@@ -1,0 +1,27 @@
+{
+  "agent_name": "SQL Query Agent",
+  "agent_id": "696e40a9e1e4c42b224b24e5",
+  "test_message": "Show me attendance for Computer Science department",
+  "expected_purpose": "parser",
+  "timestamp": "2026-01-19T14:39:25.625279",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "sql_query": "SELECT student_id, date, status FROM attendance WHERE department = ? ORDER BY date DESC",
+      "query_type": "attendance",
+      "parameters": {
+        "department": "Computer Science"
+      },
+      "validation_status": "validated",
+      "fallback_query": "SELECT student_id, date, status FROM attendance WHERE department LIKE '%Computer Science%' ORDER BY date DESC",
+      "estimated_rows": 500
+    },
+    "metadata": {
+      "agent_name": "SQL Query Agent",
+      "timestamp": "2024-06-11T11:32:53Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"sql_query\": \"SELECT student_id, date, status FROM attendance WHERE department = ? ORDER BY date DESC\",\n    \"query_type\": \"attendance\",\n    \"parameters\": {\n      \"department\": \"Computer Science\"\n    },\n    \"validation_status\": \"validated\",\n    \"fallback_query\": \"SELECT student_id, date, status FROM attendance WHERE department LIKE '%Computer Science%' ORDER BY date DESC\",\n    \"estimated_rows\": 500\n  },\n  \"metadata\": {\n    \"agent_name\": \"SQL Query Agent\",\n    \"timestamp\": \"2024-06-11T11:32:53Z\"\n  }\n}"
+}

@@ -1,0 +1,54 @@
+{
+  "agent_name": "SQL Query Agent",
+  "agent_id": "696e40a9e1e4c42b224b24e5",
+  "agent_purpose": "parser",
+  "description": "Generates validated SQL queries from natural language",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "sql_query": "string",
+      "query_type": "string",
+      "parameters": {},
+      "validation_status": "string",
+      "fallback_query": "string",
+      "estimated_rows": "number"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "sql_query": "",
+      "query_type": "",
+      "parameters": {},
+      "validation_status": "needs_review",
+      "fallback_query": "",
+      "estimated_rows": 0
+    },
+    "metadata": {
+      "agent_name": "SQL Query Agent",
+      "timestamp": "2024-06-12T00:43:20Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:40:50.708726",
+  "test_message_used": "Parse this sample text for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "sql_query": "",
+      "query_type": "",
+      "parameters": {},
+      "validation_status": "needs_review",
+      "fallback_query": "",
+      "estimated_rows": 0
+    },
+    "metadata": {
+      "agent_name": "SQL Query Agent",
+      "timestamp": "2024-06-12T00:43:20Z"
+    }
+  }
+}

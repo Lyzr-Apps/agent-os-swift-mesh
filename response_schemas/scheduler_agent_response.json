@@ -1,0 +1,140 @@
+{
+  "agent_name": "Scheduler Agent",
+  "agent_id": "696e4115c3a33af8ef0633b8",
+  "agent_purpose": "recommendation",
+  "description": "Finds optimal meeting slots and manages scheduling conflicts",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "available_slots": [
+        {
+          "start": "string",
+          "end": "string",
+          "participants_available": "number"
+        }
+      ],
+      "recommended_slot": {
+        "start": "string",
+        "end": "string",
+        "reason": "string"
+      },
+      "conflicts": [
+        {
+          "participant": "string",
+          "time": "string",
+          "reason": "string"
+        }
+      ],
+      "participants_checked": [
+        "string"
+      ],
+      "alternative_dates": [
+        "string"
+      ],
+      "scheduling_notes": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "available_slots": [
+        {
+          "start": "2024-06-18T09:00:00",
+          "end": "2024-06-18T10:00:00",
+          "participants_available": 3
+        },
+        {
+          "start": "2024-06-18T11:00:00",
+          "end": "2024-06-18T12:00:00",
+          "participants_available": 3
+        },
+        {
+          "start": "2024-06-18T15:00:00",
+          "end": "2024-06-18T16:00:00",
+          "participants_available": 3
+        }
+      ],
+      "recommended_slot": {
+        "start": "2024-06-18T11:00:00",
+        "end": "2024-06-18T12:00:00",
+        "reason": "All participants are free, mid-morning optimal slot"
+      },
+      "conflicts": [
+        {
+          "participant": "Dr. Smith",
+          "time": "2024-06-18T10:00:00",
+          "reason": "Prior meeting scheduled"
+        }
+      ],
+      "participants_checked": [
+        "Dr. Smith",
+        "Prof. Kumar",
+        "Admin Team"
+      ],
+      "alternative_dates": [
+        "2024-06-19",
+        "2024-06-20"
+      ],
+      "scheduling_notes": "Recommended mid-morning slot for higher productivity and availability. Consider alternatives if additional participants need to join."
+    },
+    "metadata": {
+      "agent_name": "Scheduler Agent",
+      "timestamp": "2024-06-18T10:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:40:59.954504",
+  "test_message_used": "Provide sample recommendations for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "available_slots": [
+        {
+          "start": "2024-06-18T09:00:00",
+          "end": "2024-06-18T10:00:00",
+          "participants_available": 3
+        },
+        {
+          "start": "2024-06-18T11:00:00",
+          "end": "2024-06-18T12:00:00",
+          "participants_available": 3
+        },
+        {
+          "start": "2024-06-18T15:00:00",
+          "end": "2024-06-18T16:00:00",
+          "participants_available": 3
+        }
+      ],
+      "recommended_slot": {
+        "start": "2024-06-18T11:00:00",
+        "end": "2024-06-18T12:00:00",
+        "reason": "All participants are free, mid-morning optimal slot"
+      },
+      "conflicts": [
+        {
+          "participant": "Dr. Smith",
+          "time": "2024-06-18T10:00:00",
+          "reason": "Prior meeting scheduled"
+        }
+      ],
+      "participants_checked": [
+        "Dr. Smith",
+        "Prof. Kumar",
+        "Admin Team"
+      ],
+      "alternative_dates": [
+        "2024-06-19",
+        "2024-06-20"
+      ],
+      "scheduling_notes": "Recommended mid-morning slot for higher productivity and availability. Consider alternatives if additional participants need to join."
+    },
+    "metadata": {
+      "agent_name": "Scheduler Agent",
+      "timestamp": "2024-06-18T10:00:00Z"
+    }
+  }
+}

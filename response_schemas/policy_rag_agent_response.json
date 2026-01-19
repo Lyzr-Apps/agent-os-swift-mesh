@@ -1,0 +1,58 @@
+{
+  "agent_name": "Policy RAG Agent",
+  "agent_id": "696e40c2c3a33af8ef063397",
+  "agent_purpose": "research",
+  "description": "Retrieves policy information from knowledge base with citations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "policy_text": "string",
+      "citations": [
+        "any"
+      ],
+      "relevance_score": "number",
+      "related_policies": [
+        "any"
+      ],
+      "effective_date": "string",
+      "compliance_level": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "policy_text": "",
+      "citations": [],
+      "relevance_score": 0.0,
+      "related_policies": [],
+      "effective_date": "",
+      "compliance_level": ""
+    },
+    "metadata": {
+      "agent_name": "Policy RAG Agent",
+      "timestamp": "2024-06-13T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:40:52.233840",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "policy_text": "",
+      "citations": [],
+      "relevance_score": 0.0,
+      "related_policies": [],
+      "effective_date": "",
+      "compliance_level": ""
+    },
+    "metadata": {
+      "agent_name": "Policy RAG Agent",
+      "timestamp": "2024-06-13T12:00:00Z"
+    }
+  }
+}

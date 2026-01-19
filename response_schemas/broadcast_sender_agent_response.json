@@ -1,0 +1,127 @@
+{
+  "agent_name": "Broadcast Sender Agent",
+  "agent_id": "696e4197e1e4c42b224b2535",
+  "agent_purpose": "assistant",
+  "description": "Executes approved broadcasts with delivery tracking and failure handling",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "broadcast_id": "string",
+      "delivery_status": "string",
+      "total_recipients": "number",
+      "delivered": "number",
+      "failed": "number",
+      "pending": "number",
+      "failed_recipients": [
+        {
+          "recipient_id": "string",
+          "reason": "string",
+          "retry_count": "number"
+        }
+      ],
+      "delivery_start_time": "string",
+      "delivery_end_time": "string",
+      "log_entry_id": "string",
+      "retry_scheduled": "boolean"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "broadcast_id": "broadcast_12345",
+      "delivery_status": "completed",
+      "total_recipients": 250,
+      "delivered": 245,
+      "failed": 5,
+      "pending": 0,
+      "failed_recipients": [
+        {
+          "recipient_id": "student_123",
+          "reason": "Invalid contact",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_234",
+          "reason": "Mailbox full",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_345",
+          "reason": "Network error",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_456",
+          "reason": "User blocked messages",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_567",
+          "reason": "Unsubscribed",
+          "retry_count": 3
+        }
+      ],
+      "delivery_start_time": "2024-03-15T09:00:00",
+      "delivery_end_time": "2024-03-15T09:05:23",
+      "log_entry_id": "log_67890",
+      "retry_scheduled": false
+    },
+    "metadata": {
+      "agent_name": "Broadcast Sender Agent",
+      "timestamp": "2024-06-19T15:42:31Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:41:07.263933",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "broadcast_id": "broadcast_12345",
+      "delivery_status": "completed",
+      "total_recipients": 250,
+      "delivered": 245,
+      "failed": 5,
+      "pending": 0,
+      "failed_recipients": [
+        {
+          "recipient_id": "student_123",
+          "reason": "Invalid contact",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_234",
+          "reason": "Mailbox full",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_345",
+          "reason": "Network error",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_456",
+          "reason": "User blocked messages",
+          "retry_count": 3
+        },
+        {
+          "recipient_id": "student_567",
+          "reason": "Unsubscribed",
+          "retry_count": 3
+        }
+      ],
+      "delivery_start_time": "2024-03-15T09:00:00",
+      "delivery_end_time": "2024-03-15T09:05:23",
+      "log_entry_id": "log_67890",
+      "retry_scheduled": false
+    },
+    "metadata": {
+      "agent_name": "Broadcast Sender Agent",
+      "timestamp": "2024-06-19T15:42:31Z"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "workflow_status": "complete",
+  "agents_created": 9,
+  "agents": {
+    "semantic_router_agent": {
+      "agent_id": "696e415ee1e4c42b224b252d",
+      "name": "Semantic Router Agent",
+      "type": "Independent",
+      "status": "created",
+      "schema_saved": true
+    },
+    "orgcopilot_orchestrator": {
+      "agent_id": "696e4142c3a33af8ef0633c3",
+      "name": "OrgCopilot Orchestrator",
+      "type": "Manager",
+      "status": "created",
+      "schema_saved": true,
+      "managed_agents_count": 5
+    },
+    "sql_query_agent": {
+      "agent_id": "696e40a9e1e4c42b224b24e5",
+      "name": "SQL Query Agent",
+      "type": "Sub-Agent",
+      "status": "created",
+      "schema_saved": true
+    },
+    "policy_rag_agent": {
+      "agent_id": "696e40c2c3a33af8ef063397",
+      "name": "Policy RAG Agent",
+      "type": "Sub-Agent",
+      "status": "created",
+      "schema_saved": true,
+      "has_knowledge_base": true,
+      "rag_id": "696e40b4703720a565f354e9"
+    },
+    "calendar_resolution_agent": {
+      "agent_id": "696e40e5c3a33af8ef0633a9",
+      "name": "Calendar Resolution Agent",
+      "type": "Sub-Agent",
+      "status": "created",
+      "schema_saved": true
+    },
+    "counterfactual_analytics_agent": {
+      "agent_id": "696e40fec3a33af8ef0633ad",
+      "name": "Counterfactual Analytics Agent",
+      "type": "Sub-Agent",
+      "status": "created",
+      "schema_saved": true
+    },
+    "scheduler_agent": {
+      "agent_id": "696e4115c3a33af8ef0633b8",
+      "name": "Scheduler Agent",
+      "type": "Sub-Agent",
+      "status": "created",
+      "schema_saved": true
+    },
+    "broadcast_composer_agent": {
+      "agent_id": "696e4179e1e4c42b224b2534",
+      "name": "Broadcast Composer Agent",
+      "type": "Independent",
+      "status": "created",
+      "schema_saved": true
+    },
+    "broadcast_sender_agent": {
+      "agent_id": "696e4197e1e4c42b224b2535",
+      "name": "Broadcast Sender Agent",
+      "type": "Independent",
+      "status": "created",
+      "schema_saved": true
+    }
+  },
+  "response_schemas_saved": [
+    "sql_query_agent_response.json",
+    "policy_rag_agent_response.json",
+    "calendar_resolution_agent_response.json",
+    "counterfactual_analytics_agent_response.json",
+    "scheduler_agent_response.json",
+    "orgcopilot_orchestrator_response.json",
+    "semantic_router_agent_response.json",
+    "broadcast_composer_agent_response.json",
+    "broadcast_sender_agent_response.json"
+  ],
+  "knowledge_bases": [
+    {
+      "name": "Policy Documents KB",
+      "rag_id": "696e40b4703720a565f354e9",
+      "collection_name": "policydocumentskbru1x",
+      "linked_agent": "Policy RAG Agent"
+    }
+  ],
+  "created_at": "2026-01-19T00:00:00Z",
+  "last_updated": "2026-01-19T00:00:00Z"
+}

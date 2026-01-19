@@ -1,0 +1,25 @@
+{
+  "agent_name": "Policy RAG Agent",
+  "agent_id": "696e40c2c3a33af8ef063397",
+  "test_message": "What is the attendance policy for students?",
+  "expected_purpose": "research",
+  "timestamp": "2026-01-19T14:39:30.025833",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "policy_text": "No relevant attendance policy information is available in the current knowledge base.",
+      "citations": [],
+      "relevance_score": 0.0,
+      "related_policies": [],
+      "effective_date": "",
+      "compliance_level": ""
+    },
+    "metadata": {
+      "agent_name": "Policy RAG Agent",
+      "timestamp": "2024-06-14T17:24:45Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"policy_text\": \"No relevant attendance policy information is available in the current knowledge base.\",\n    \"citations\": [],\n    \"relevance_score\": 0.0,\n    \"related_policies\": [],\n    \"effective_date\": \"\",\n    \"compliance_level\": \"\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Policy RAG Agent\",\n    \"timestamp\": \"2024-06-14T17:24:45Z\"\n  }\n}"
+}

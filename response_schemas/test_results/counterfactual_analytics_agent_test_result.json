@@ -1,0 +1,70 @@
+{
+  "agent_name": "Counterfactual Analytics Agent",
+  "agent_id": "696e40fec3a33af8ef0633ad",
+  "test_message": "Why is attendance dropping in Sem 3?",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-19T14:39:38.308280",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "trends_identified": [
+        {
+          "trend": "Attendance declining in Semester 3",
+          "severity": "high",
+          "timeframe": "Last 2 months"
+        }
+      ],
+      "correlations": [
+        {
+          "variable_a": "attendance",
+          "variable_b": "faculty changes",
+          "correlation": -0.68,
+          "significance": "p<0.05"
+        },
+        {
+          "variable_a": "attendance",
+          "variable_b": "assessment difficulty",
+          "correlation": -0.51,
+          "significance": "p<0.10"
+        }
+      ],
+      "hypotheses": [
+        "Recent faculty turnover may be affecting student engagement in Semester 3.",
+        "Increased perceived difficulty of assessments is leading to decreased attendance.",
+        "Possible lack of motivation post-midterm is causing lower attendance rates."
+      ],
+      "what_if_scenarios": [
+        {
+          "scenario": "If faculty stability improves in Semester 3",
+          "projected_outcome": "Attendance may rise by 8-12%",
+          "confidence": 0.7
+        },
+        {
+          "scenario": "If assessment formats are moderated",
+          "projected_outcome": "Attendance could recover by 5%",
+          "confidence": 0.6
+        }
+      ],
+      "anomalies": [
+        {
+          "type": "outlier",
+          "description": "Steep drop in attendance after midterm exams in March",
+          "date": "2024-03-10"
+        }
+      ],
+      "recommendations": [
+        "Assess and support new faculty for Semester 3 courses.",
+        "Review assessment difficulty and consider moderation.",
+        "Engage students with feedback to understand specific attendance barriers.",
+        "Monitor attendance weekly for early warning of further declines."
+      ]
+    },
+    "metadata": {
+      "agent_name": "Counterfactual Analytics Agent",
+      "timestamp": "2024-06-18T12:36:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"trends_identified\": [\n      {\n        \"trend\": \"Attendance declining in Semester 3\",\n        \"severity\": \"high\",\n        \"timeframe\": \"Last 2 months\"\n      }\n    ],\n    \"correlations\": [\n      {\n        \"variable_a\": \"attendance\",\n        \"variable_b\": \"faculty changes\",\n        \"correlation\": -0.68,\n        \"significance\": \"p<0.05\"\n      },\n      {\n        \"variable_a\": \"attendance\",\n        \"variable_b\": \"assessment difficulty\",\n        \"correlation\": -0.51,\n        \"significance\": \"p<0.10\"\n      }\n    ],\n    \"hypotheses\": [\n      \"Recent faculty turnover may be affecting student engagement in Semester 3.\",\n      \"Increased perceived difficulty of assessments is leading to decreased attendance.\",\n      \"Possible lack of motivation post-midterm is causing lower attendance rates.\"\n    ],\n    \"what_if_scenarios\": [\n      {\n        \"scenario\": \"If faculty stability improves in Semester 3\",\n        \"projected_outcome\": \"Attendance may rise by 8-12%\",\n        \"confidence\": 0.7\n      },\n      {\n        \"scenario\": \"If assessment formats are moderated\",\n        \"projected_outcome\": \"Attendance could recover by 5%\",\n        \"confidence\": 0.6\n      }\n    ],\n    \"anomalies\": [\n      {\n        \"type\": \"outlier\",\n        \"description\": \"Steep drop in attendance after midterm exams in March\",\n        \"date\": \"2024-03-10\"\n      }\n    ],\n    \"recommendations\": [\n      \"Assess and support new faculty for Semester 3 courses.\",\n      \"Review assessment difficulty and consider moderation.\",\n      \"Engage students with feedback to understand specific attendance barriers.\",\n      \"Monitor attendance weekly for early warning of further declines.\"\n    ]\n  },\n  \"metadata\": {\n    \"agent_name\": \"Counterfactual Analytics Agent\",\n    \"timestamp\": \"2024-06-18T12:36:00Z\"\n  }\n}"
+}

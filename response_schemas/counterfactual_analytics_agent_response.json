@@ -1,0 +1,66 @@
+{
+  "agent_name": "Counterfactual Analytics Agent",
+  "agent_id": "696e40fec3a33af8ef0633ad",
+  "agent_purpose": "analyzer",
+  "description": "Analyzes trends, identifies correlations and provides recommendations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "trends_identified": [
+        "any"
+      ],
+      "correlations": [
+        "any"
+      ],
+      "hypotheses": [
+        "any"
+      ],
+      "what_if_scenarios": [
+        "any"
+      ],
+      "anomalies": [
+        "any"
+      ],
+      "recommendations": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "trends_identified": [],
+      "correlations": [],
+      "hypotheses": [],
+      "what_if_scenarios": [],
+      "anomalies": [],
+      "recommendations": []
+    },
+    "metadata": {
+      "agent_name": "Counterfactual Analytics Agent",
+      "timestamp": "2024-06-13T10:53:22Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:40:55.498201",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "trends_identified": [],
+      "correlations": [],
+      "hypotheses": [],
+      "what_if_scenarios": [],
+      "anomalies": [],
+      "recommendations": []
+    },
+    "metadata": {
+      "agent_name": "Counterfactual Analytics Agent",
+      "timestamp": "2024-06-13T10:53:22Z"
+    }
+  }
+}

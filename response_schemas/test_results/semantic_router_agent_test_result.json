@@ -1,0 +1,36 @@
+{
+  "agent_name": "Semantic Router Agent",
+  "agent_id": "696e415ee1e4c42b224b252d",
+  "test_message": "Kal ka kya scene hai?",
+  "expected_purpose": "parser",
+  "timestamp": "2026-01-19T14:39:10.284139",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "normalized_query": "What is the schedule or plan for tomorrow?",
+      "original_query": "Kal ka kya scene hai?",
+      "intent": "query_data",
+      "confidence": 0.72,
+      "entities": [
+        {
+          "type": "date_reference",
+          "value": "tomorrow"
+        },
+        {
+          "type": "action",
+          "value": "get_schedule_or_plan"
+        }
+      ],
+      "requires_feedback": false,
+      "suggested_clarification": "Do you want to know the class schedule, events, or something specific for tomorrow?",
+      "routing_recommendation": "SQL Query Agent"
+    },
+    "metadata": {
+      "agent_name": "Semantic Router Agent",
+      "timestamp": "2024-06-10T11:18:35Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"normalized_query\": \"What is the schedule or plan for tomorrow?\",\n    \"original_query\": \"Kal ka kya scene hai?\",\n    \"intent\": \"query_data\",\n    \"confidence\": 0.72,\n    \"entities\": [\n      {\n        \"type\": \"date_reference\",\n        \"value\": \"tomorrow\"\n      },\n      {\n        \"type\": \"action\",\n        \"value\": \"get_schedule_or_plan\"\n      }\n    ],\n    \"requires_feedback\": false,\n    \"suggested_clarification\": \"Do you want to know the class schedule, events, or something specific for tomorrow?\",\n    \"routing_recommendation\": \"SQL Query Agent\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Semantic Router Agent\",\n    \"timestamp\": \"2024-06-10T11:18:35Z\"\n  }\n}"
+}

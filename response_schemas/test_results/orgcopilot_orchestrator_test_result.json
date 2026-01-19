@@ -1,0 +1,37 @@
+{
+  "agent_name": "OrgCopilot Orchestrator",
+  "agent_id": "696e4142c3a33af8ef0633c3",
+  "test_message": "CS walon ka attendance dikhao",
+  "expected_purpose": "manager",
+  "timestamp": "2026-01-19T14:39:23.109052",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "final_answer": "CS walon (Computer Science students) ki attendance ki details nikalne ke liye SQL query tayyar kar li gayi hai. Aap chahen to student ID, naam, date, aur attendance status ki list le sakte hain. Agar further breakdown ya kisi specific date/duration ki attendance chahiye ho toh bataen.",
+      "agents_invoked": [
+        "SQL Query Agent"
+      ],
+      "routing_hops": 1,
+      "confidence_score": 0.95,
+      "sources": [
+        {
+          "agent": "SQL Query Agent",
+          "confidence": 0.95
+        }
+      ],
+      "conversation_state": "active",
+      "follow_up_suggestions": [
+        "Kya aap kisi specific date range ki attendance dekhna chahte hain?",
+        "Kya aap ko present/absent ka breakdown chahiye?",
+        "CS ke kis year/semester ki attendance chahiye?"
+      ]
+    },
+    "metadata": {
+      "agent_name": "OrgCopilot Orchestrator",
+      "timestamp": "2024-06-13T10:56:45Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"final_answer\": \"CS walon (Computer Science students) ki attendance ki details nikalne ke liye SQL query tayyar kar li gayi hai. Aap chahen to student ID, naam, date, aur attendance status ki list le sakte hain. Agar further breakdown ya kisi specific date/duration ki attendance chahiye ho toh bataen.\",\n    \"agents_invoked\": [\"SQL Query Agent\"],\n    \"routing_hops\": 1,\n    \"confidence_score\": 0.95,\n    \"sources\": [\n      {\n        \"agent\": \"SQL Query Agent\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"conversation_state\": \"active\",\n    \"follow_up_suggestions\": [\n      \"Kya aap kisi specific date range ki attendance dekhna chahte hain?\",\n      \"Kya aap ko present/absent ka breakdown chahiye?\",\n      \"CS ke kis year/semester ki attendance chahiye?\"\n    ]\n  },\n  \"metadata\": {\n    \"agent_name\": \"OrgCopilot Orchestrator\",\n    \"timestamp\": \"2024-06-13T10:56:45Z\"\n  }\n}"
+}

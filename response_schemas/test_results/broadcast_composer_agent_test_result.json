@@ -1,0 +1,32 @@
+{
+  "agent_name": "Broadcast Composer Agent",
+  "agent_id": "696e4179e1e4c42b224b2534",
+  "test_message": "Draft announcement for mid-term exam schedule to all Sem 3 students",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-19T14:39:48.772952",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "draft_message": "Dear Students,\n\nThe mid-term examination schedule for Semester 3 has been released. Please review the attached timetable carefully and make necessary preparations. For any queries, contact your department coordinator. Best of luck for your exams!\n\nRegards,\nExamination Cell",
+      "subject": "Mid-Term Exam Schedule for Semester 3",
+      "audience_filter": {
+        "role": "student",
+        "semester": 3
+      },
+      "estimated_recipients": 350,
+      "urgency": "medium",
+      "scheduled_time": "2024-06-10T09:00:00",
+      "approval_required": true,
+      "approval_card_id": "broadcast_draft_001",
+      "preview_text": "Dear Students, The mid-term examination schedule for Semester 3 has been released. Please review the attached timetable.",
+      "compliance_check": "passed"
+    },
+    "metadata": {
+      "agent_name": "Broadcast Composer Agent",
+      "timestamp": "2024-06-10T07:31:41Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"draft_message\": \"Dear Students,\\n\\nThe mid-term examination schedule for Semester 3 has been released. Please review the attached timetable carefully and make necessary preparations. For any queries, contact your department coordinator. Best of luck for your exams!\\n\\nRegards,\\nExamination Cell\",\n    \"subject\": \"Mid-Term Exam Schedule for Semester 3\",\n    \"audience_filter\": {\"role\": \"student\", \"semester\": 3},\n    \"estimated_recipients\": 350,\n    \"urgency\": \"medium\",\n    \"scheduled_time\": \"2024-06-10T09:00:00\",\n    \"approval_required\": true,\n    \"approval_card_id\": \"broadcast_draft_001\",\n    \"preview_text\": \"Dear Students, The mid-term examination schedule for Semester 3 has been released. Please review the attached timetable.\",\n    \"compliance_check\": \"passed\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Broadcast Composer Agent\",\n    \"timestamp\": \"2024-06-10T07:31:41Z\"\n  }\n}"
+}

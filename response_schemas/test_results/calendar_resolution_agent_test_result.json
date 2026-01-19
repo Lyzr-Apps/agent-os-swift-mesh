@@ -1,0 +1,32 @@
+{
+  "agent_name": "Calendar Resolution Agent",
+  "agent_id": "696e40e5c3a33af8ef0633a9",
+  "test_message": "mid-sem ke baad ka schedule",
+  "expected_purpose": "parser",
+  "timestamp": "2026-01-19T14:39:32.123758",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "resolved_date": "2024-03-16",
+      "original_phrase": "mid-sem ke baad",
+      "date_type": "range",
+      "date_range": {
+        "start": "2024-03-16",
+        "end": "2024-03-31"
+      },
+      "confidence": 0.92,
+      "academic_context": "Days immediately following mid-semester exams, Spring 2024 semester",
+      "alternative_interpretations": [
+        "2024-03-17",
+        "2024-03-18"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Calendar Resolution Agent",
+      "timestamp": "2024-06-13T16:26:21Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"resolved_date\": \"2024-03-16\",\n    \"original_phrase\": \"mid-sem ke baad\",\n    \"date_type\": \"range\",\n    \"date_range\": {\"start\": \"2024-03-16\", \"end\": \"2024-03-31\"},\n    \"confidence\": 0.92,\n    \"academic_context\": \"Days immediately following mid-semester exams, Spring 2024 semester\",\n    \"alternative_interpretations\": [\"2024-03-17\", \"2024-03-18\"]\n  },\n  \"metadata\": {\n    \"agent_name\": \"Calendar Resolution Agent\",\n    \"timestamp\": \"2024-06-13T16:26:21Z\"\n  }\n}"
+}

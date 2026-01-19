@@ -1,0 +1,139 @@
+{
+  "workflow_name": "OrgCopilot Multi-Agent System",
+  "description": "Educational institution management system with Hinglish support, intelligent routing, and broadcast capabilities",
+  "agents": [
+    {
+      "agent_id": "696e415ee1e4c42b224b252d",
+      "name": "Semantic Router Agent",
+      "type": "Independent",
+      "description": "Normalizes Hinglish/slang queries into structured intent JSON with entity extraction",
+      "trigger": "Auto (on every user input)",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "position": {"x": 100, "y": 100}
+    },
+    {
+      "agent_id": "696e4142c3a33af8ef0633c3",
+      "name": "OrgCopilot Orchestrator",
+      "type": "Manager",
+      "description": "Central controller that manages conversation state, enforces max 5 hops, routes to sub-agents",
+      "trigger": "Send on Chat Interface",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "managed_agents": [
+        "696e40a9e1e4c42b224b24e5",
+        "696e40c2c3a33af8ef063397",
+        "696e40e5c3a33af8ef0633a9",
+        "696e40fec3a33af8ef0633ad",
+        "696e4115c3a33af8ef0633b8"
+      ],
+      "position": {"x": 300, "y": 100}
+    },
+    {
+      "agent_id": "696e40a9e1e4c42b224b24e5",
+      "name": "SQL Query Agent",
+      "type": "Sub-Agent",
+      "description": "Self-correcting query generator for attendance, fees, exam results, student/faculty data",
+      "trigger": "Auto (via Manager)",
+      "model": "gpt-4.1",
+      "temperature": 0.1,
+      "position": {"x": 500, "y": 50}
+    },
+    {
+      "agent_id": "696e40c2c3a33af8ef063397",
+      "name": "Policy RAG Agent",
+      "type": "Sub-Agent",
+      "description": "Retrieves relevant policies, handbooks, and institutional guidelines using vector search",
+      "trigger": "Auto (via Manager)",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "has_knowledge_base": true,
+      "rag_id": "696e40b4703720a565f354e9",
+      "position": {"x": 500, "y": 120}
+    },
+    {
+      "agent_id": "696e40e5c3a33af8ef0633a9",
+      "name": "Calendar Resolution Agent",
+      "type": "Sub-Agent",
+      "description": "Maps vague temporal phrases to exact dates using academic calendar lookup",
+      "trigger": "Auto (via Manager)",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "position": {"x": 500, "y": 190}
+    },
+    {
+      "agent_id": "696e40fec3a33af8ef0633ad",
+      "name": "Counterfactual Analytics Agent",
+      "type": "Sub-Agent",
+      "description": "Identifies negative trends, runs correlation analysis, generates what-if projections",
+      "trigger": "Auto (via Manager)",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "position": {"x": 500, "y": 260}
+    },
+    {
+      "agent_id": "696e4115c3a33af8ef0633b8",
+      "name": "Scheduler Agent",
+      "type": "Sub-Agent",
+      "description": "Finds conflict-free meeting slots by checking calendar_events",
+      "trigger": "Auto (via Manager)",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "position": {"x": 500, "y": 330}
+    },
+    {
+      "agent_id": "696e4179e1e4c42b224b2534",
+      "name": "Broadcast Composer Agent",
+      "type": "Independent",
+      "description": "Drafts mass communications with audience filters. Never sends without approval",
+      "trigger": "Draft Broadcast on Admin Panel",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "position": {"x": 100, "y": 400}
+    },
+    {
+      "agent_id": "696e4197e1e4c42b224b2535",
+      "name": "Broadcast Sender Agent",
+      "type": "Independent",
+      "description": "Executes approved broadcasts with delivery tracking and retry logic",
+      "trigger": "Approve & Send on ApprovalCard",
+      "model": "gpt-4.1",
+      "temperature": 0.1,
+      "position": {"x": 300, "y": 400}
+    }
+  ],
+  "workflow_graph": {
+    "nodes": [
+      {"id": "user_input", "type": "Input", "label": "User Input", "nodeCategory": "input"},
+      {"id": "semantic_router", "type": "Agent", "label": "Semantic Router Agent", "nodeCategory": "agent"},
+      {"id": "orchestrator", "type": "Agent", "label": "OrgCopilot Orchestrator", "nodeCategory": "agent"},
+      {"id": "sql_query_agent", "type": "Agent", "label": "SQL Query Agent", "nodeCategory": "agent"},
+      {"id": "policy_rag_agent", "type": "Agent", "label": "Policy RAG Agent", "nodeCategory": "agent"},
+      {"id": "calendar_resolution_agent", "type": "Agent", "label": "Calendar Resolution Agent", "nodeCategory": "agent"},
+      {"id": "counterfactual_analytics_agent", "type": "Agent", "label": "Counterfactual Analytics Agent", "nodeCategory": "agent"},
+      {"id": "scheduler_agent", "type": "Agent", "label": "Scheduler Agent", "nodeCategory": "agent"},
+      {"id": "admin_input", "type": "Input", "label": "Admin Input", "nodeCategory": "input"},
+      {"id": "broadcast_composer", "type": "Agent", "label": "Broadcast Composer Agent", "nodeCategory": "agent"},
+      {"id": "broadcast_sender", "type": "Agent", "label": "Broadcast Sender Agent", "nodeCategory": "agent"},
+      {"id": "output", "type": "Output", "label": "Response Output", "nodeCategory": "end"}
+    ],
+    "edges": [
+      {"source": "user_input", "target": "semantic_router"},
+      {"source": "semantic_router", "target": "orchestrator"},
+      {"source": "orchestrator", "target": "sql_query_agent"},
+      {"source": "orchestrator", "target": "policy_rag_agent"},
+      {"source": "orchestrator", "target": "calendar_resolution_agent"},
+      {"source": "orchestrator", "target": "counterfactual_analytics_agent"},
+      {"source": "orchestrator", "target": "scheduler_agent"},
+      {"source": "orchestrator", "target": "output"},
+      {"source": "admin_input", "target": "broadcast_composer"},
+      {"source": "broadcast_composer", "target": "broadcast_sender"},
+      {"source": "broadcast_sender", "target": "output"}
+    ]
+  },
+  "created_at": "2026-01-19T00:00:00Z",
+  "total_agents": 9,
+  "manager_agents": 1,
+  "sub_agents": 5,
+  "independent_agents": 3
+}

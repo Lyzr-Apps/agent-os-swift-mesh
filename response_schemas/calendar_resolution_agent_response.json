@@ -1,0 +1,59 @@
+{
+  "agent_name": "Calendar Resolution Agent",
+  "agent_id": "696e40e5c3a33af8ef0633a9",
+  "agent_purpose": "parser",
+  "description": "Resolves temporal phrases to specific dates and ranges",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "resolved_date": "null",
+      "original_phrase": "string",
+      "date_type": "null",
+      "date_range": "null",
+      "confidence": "number",
+      "academic_context": "null",
+      "alternative_interpretations": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "resolved_date": null,
+      "original_phrase": "Parse this sample text for testing",
+      "date_type": null,
+      "date_range": null,
+      "confidence": 0,
+      "academic_context": null,
+      "alternative_interpretations": []
+    },
+    "metadata": {
+      "agent_name": "Calendar Resolution Agent",
+      "timestamp": "2024-06-14T13:03:22Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-19T14:40:54.063628",
+  "test_message_used": "Parse this sample text for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "resolved_date": null,
+      "original_phrase": "Parse this sample text for testing",
+      "date_type": null,
+      "date_range": null,
+      "confidence": 0,
+      "academic_context": null,
+      "alternative_interpretations": []
+    },
+    "metadata": {
+      "agent_name": "Calendar Resolution Agent",
+      "timestamp": "2024-06-14T13:03:22Z"
+    }
+  }
+}
